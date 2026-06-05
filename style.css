@@ -1,0 +1,82 @@
+/* Core Typographic Setup */
+.font-serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Premium Reset & No-Lag Optimization */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #0B0A09;
+}
+
+/* GPU Acceleration Setup to completely eliminate lags */
+.will-change-transform {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+}
+
+/* Dynamic Glassmorphic Navbar States */
+.nav-active {
+    background-color: rgba(11, 10, 9, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+    border-bottom: 1px solid rgba(197, 168, 128, 0.1);
+}
+
+/* Minimal Luxury Hover Animations */
+.nav-link {
+    position: relative;
+    transition: color 0.4s ease;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #C5A880;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.nav-link:hover {
+    color: #C5A880;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Premium Hover Effect for the Main Button */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #C5A880;
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 0;
+}
+.cta-button:hover::before {
+    transform: translateY(0);
+}
+.cta-button:hover {
+    color: #0B0A09;
+}
