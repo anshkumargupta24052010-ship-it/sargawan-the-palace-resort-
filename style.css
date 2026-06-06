@@ -80,53 +80,22 @@ html {
 .cta-button:hover {
     color: #0B0A09;
 }
-.events-section {
-    padding: 60px 20px;
-    background-color: #fcf9f2; /* Light royal cream background */
-    text-align: center;
-}
+
+/* Luxury Event Section Fixes */
 .section-title {
-    font-size: 2.5rem;
-    color: #b89343; /* Royal Gold */
-    margin-bottom: 10px;
-}
-.section-subtitle {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 40px;
-}
-.events-grid {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    color: #C5A880; /* Matched Premium Gold */
 }
 .event-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    border-top: 4px solid #b89343;
-    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-top: 4px solid #C5A880;
 }
 .event-card:hover {
     transform: translateY(-5px);
+    border-top-color: #F5F2EB;
 }
-.event-icon {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-.event-card h3 {
-    font-size: 1.5rem;
-    color: #222;
-    margin-bottom: 15px;
-}
-.event-card p {
-    color: #666;
-    line-height: 1.6;
+
+/* Gallery Hover FX */
+.gallery-item {
+    border-radius: 4px; /* Shifting from 10px to 4px for modern razor-sharp editorial style */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
