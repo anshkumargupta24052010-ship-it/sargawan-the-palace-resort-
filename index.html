@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sargawan Palace Resort | The Royal Sanctuary</title>
-    <!-- Tailwind CSS for modern elite layout -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Elite Typography for Luxury Brand Look -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Plus+Jakarta+Sans:wght@200;400;500&display=swap" rel="stylesheet">
-    <!-- GSAP Core & ScrollTrigger for Ultra-Smooth Performance -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-[#0B0A09] text-[#F5F2EB] overflow-x-hidden antialiased selection:bg-[#C5A880] selection:text-black">
 
-    <!-- Premium Overlay Header -->
     <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-20 py-8 transition-all duration-500" id="navbar">
         <div class="logo text-xl md:text-2xl font-serif tracking-[0.3em] uppercase text-[#F5F2EB]">
             Sargawan <span class="text-[#C5A880] font-light italic">Palace</span>
@@ -24,22 +20,18 @@
             <a href="#about" class="nav-link">The Estate</a>
             <a href="#suites" class="nav-link">Suites</a>
             <a href="#weddings" class="nav-link">Celebrations</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
         </div>
         <div>
-            <!-- WhatsApp inquiry redirect for seamless contact without heavy backend -->
             <a href="https://wa.me/91XXXXXXXXXX?text=Hi,%20I%20want%20to%20book%20a%20stay%20at%20Sargawan%20Palace." target="_blank" class="cta-button inline-block relative overflow-hidden border border-[#C5A880]/40 text-[#C5A880] font-sans text-[11px] tracking-[0.2em] uppercase px-8 py-3.5 backdrop-blur-md transition-colors duration-500">
                 <span class="relative z-10">Reserve Stay</span>
             </a>
         </div>
     </header>
 
-    <!-- Hero Section: Deep Cinematic Heritage Experience -->
     <section class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-black">
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-[#0B0A09] z-10"></div>
-        
-        <!-- Save your Google Maps high-res image as 'hero-palace.jpg' inside assets/ -->
-        <img src="assets/main" 
-             class="absolute top-0 left-0 w-full h-full object-cover opacity-50 scale-110 will-change-transform" id="hero-img" alt="Royal Heritage">
+        <img src="assets/main" class="absolute top-0 left-0 w-full h-full object-cover opacity-50 scale-110 will-change-transform" id="hero-img" alt="Royal Heritage">
 
         <div class="relative z-20 text-center px-4 max-w-5xl">
             <span class="text-[#C5A880] font-sans text-xs tracking-[0.5em] uppercase block mb-6 opacity-0 translate-y-4" id="hero-tag">
@@ -59,7 +51,6 @@
         </div>
     </section>
 
-    <!-- Section 1: Split-Screen Luxury Estate -->
     <section id="about" class="relative py-24 md:py-40 px-6 md:px-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
         <div class="md:col-span-5 space-y-8 z-20">
             <div class="space-y-2">
@@ -76,20 +67,16 @@
         
         <div class="md:col-span-7 relative flex justify-end items-center">
             <div class="absolute -left-4 bottom-[-40px] w-48 h-48 border border-[#C5A880]/10 hidden md:block pointer-events-none"></div>
-            <!-- Save your main resort image as 'about-palace.jpg' inside assets/ -->
             <div class="relative w-full md:w-[85%] h-[450px] md:h-[600px] overflow-hidden bg-[#161513] shadow-2xl group border border-white/5">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGGrS9Wz0y6txou7Ez2ZP9AfpPsZohXtFwX86wH0GiMh7kjKc_WqTq7rPZrTZ94VVjGWLcnuXgubf7tDlyRHFOQtHM3oC5V69o5Rx5os5kUzJk9nOWjqzZck7m_n1Bb-T0dUfjV=w397-h298-k-no" 
-                     class="w-full h-full object-cover reveal-img will-change-transform scale-105" alt="Resort Architecture">
+                <img src="https://sargawanpalace.co.in/images/slides/banner11.jpg" class="w-full h-full object-cover reveal-img will-change-transform scale-105" alt="Resort Architecture">
             </div>
         </div>
     </section>
 
-        <!-- Section 2: Royal Weddings & Events Segment -->
     <section id="weddings" class="py-24 md:py-40 px-6 md:px-20 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
         <div class="md:col-span-7 relative order-2 md:order-1">
-            <!-- Save event/lawn image as 'wedding-palace.jpg' inside assets/ -->
             <div class="relative w-full md:w-[90%] h-[400px] md:h-[550px] overflow-hidden bg-[#161513] shadow-2xl border border-white/5">
-                <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAGW8k_AVK7IPX3VSmJhV-aN5z7Qi3uJ366ZFFmXbliWaQMduWoZBK_LZb9RhMDEqvuxDfj9Umup69BP-Vp9xcs49sn_gbztYbgeaPc9DYobhi5my0syIR2BKbSpgKy4exTe1u14R0JLPOqD=w397-h298-k-no" class="w-full h-full object-cover reveal-img will-change-transform scale-105" alt="Royal Weddings">
+                <img src="assets/wedding.jpg" class="w-full h-full object-cover reveal-img will-change-transform scale-105" alt="Royal Weddings">
             </div>
         </div>
         <div class="md:col-span-5 space-y-8 order-1 md:order-2">
@@ -105,29 +92,28 @@
             </p>
         </div>
     </section>
-    <!-- Section: Grand Weddings & Events -->
-<section class="events-section">
-    <div class="container">
-        <h2 class="section-title">Grand Weddings & Celebrations</h2>
-        <p class="section-subtitle">Ambikapur's premier destination for royal weddings and star-studded events.</p>
-        
-        <div class="events-grid">
-            <div class="event-card">
-                <div class="event-icon">👑</div>
-                <h3>Royal Destination Weddings</h3>
-                <p>We turn your dream wedding into reality with massive lawns, luxurious banquet halls, and premium catering. Personally trusted by families for the grandest celebrations in town.</p>
-            </div>
+
+    <section class="events-section py-24 px-6 md:px-20 border-t border-white/5 bg-[#0e0d0c]">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="section-title font-serif font-light tracking-wide text-3xl md:text-5xl mb-4">Grand Weddings & Celebrations</h2>
+            <p class="section-subtitle font-sans font-light text-sm text-[#F5F2EB]/60 tracking-wide max-w-2xl mx-auto mb-16">Ambikapur's premier destination for royal weddings and star-studded events.</p>
             
-            <div class="event-card">
-                <div class="event-icon">⭐</div>
-                <h3>Celebrity Star Nights</h3>
-                <p>From hosting Bollywood superstar <strong>Govinda</strong> to top-tier personalities, Sargawan Palace is the ultimate choice for high-profile events and entertainment nights.</p>
+            <div class="events-grid flex justify-center gap-8 flex-wrap">
+                <div class="event-card bg-[#161513] p-8 border-t-4 border-[#C5A880] text-left max-w-md flex-1 min-w-[300px] transition-transform duration-300 border border-white/5">
+                    <div class="event-icon text-4xl mb-4">👑</div>
+                    <h3 class="font-serif text-2xl font-light text-[#F5F2EB] mb-4">Royal Destination Weddings</h3>
+                    <p class="font-sans font-light text-sm text-[#F5F2EB]/60 leading-relaxed">We turn your dream wedding into reality with massive lawns, luxurious banquet halls, and premium catering. Personally trusted by families for the grandest celebrations in town.</p>
+                </div>
+                
+                <div class="event-card bg-[#161513] p-8 border-t-4 border-[#C5A880] text-left max-w-md flex-1 min-w-[300px] transition-transform duration-300 border border-white/5">
+                    <div class="event-icon text-4xl mb-4">⭐</div>
+                    <h3 class="font-serif text-2xl font-light text-[#F5F2EB] mb-4">Celebrity Star Nights</h3>
+                    <p class="font-sans font-light text-sm text-[#F5F2EB]/60 leading-relaxed">From hosting Bollywood superstar <strong>Govinda</strong> to top-tier personalities, Sargawan Palace is the ultimate choice for high-profile events and entertainment nights.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Section 3: Premium Suites (Rooms Showcase) -->
     <section id="suites" class="py-24 bg-[#11100F] border-t border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 md:px-20 mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div class="space-y-4">
@@ -139,24 +125,19 @@
             </p>
         </div>
 
-        <!-- Room Cards Layout -->
         <div class="max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <!-- Suite 1 -->
             <div class="space-y-6 group">
-                <!-- Save suite image as 'suite-royal.jpg' inside assets/ -->
                 <div class="h-[350px] md:h-[450px] overflow-hidden bg-[#161513] border border-white/5">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFwesFRnFssyIUJjXF2AuQWKhLvj3gWVEOCm7wKhd7KtFH9NdJyUsdkgupdqDZXEVYMgKYzIhW2ews9pXgfVTN-vLrB8NYmm1LPqhkMWEiYRM3GvPlPTPinTvWSAf88EF-O5EYVK_Hi_70=w140-h103-p-k-no" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 will-change-transform" alt="Royal Suite">
+                    <img src="assets/maharaja suit.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 will-change-transform" alt="Royal Suite">
                 </div>
                 <div class="flex justify-between items-baseline">
                     <h3 class="text-2xl font-serif font-light text-[#F5F2EB]">The Maharaja Suite</h3>
                     <span class="text-[#C5A880] font-sans text-xs tracking-[0.1em]">Premium Luxury</span>
                 </div>
             </div>
-            <!-- Suite 2 -->
             <div class="space-y-6 group">
-                <!-- Save suite image as 'suite-heritage.jpg' inside assets/ -->
                 <div class="h-[350px] md:h-[450px] overflow-hidden bg-[#161513] border border-white/5">
-                    <img src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFv1ELPtXCqR9VcOJtbI80KOXcFERXE_R0aC-rzjsoMGH6V0vplr-JoVD1CxmB2UR4ReWNkHEsCutvxSyfhiSmQ1YozjtxhrCcXG23Np95oytJpfGMmBBSW_QfoRyCemSONSSzTVqtuBaU=w447-h298-k-no" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 will-change-transform" alt="Heritage Suite">
+                    <img src="assets/suite-heritage.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 will-change-transform" alt="Heritage Suite">
                 </div>
                 <div class="flex justify-between items-baseline">
                     <h3 class="text-2xl font-serif font-light text-[#F5F2EB]">Heritage Executive</h3>
@@ -166,8 +147,41 @@
         </div>
     </section>
 
+    <section id="gallery" class="gallery-section py-24 bg-[#0B0A09]">
+        <div class="max-w-7xl mx-auto px-6 md:px-20">
+            <h2 class="section-title font-serif font-light tracking-wide text-3xl md:text-5xl text-center text-[#C5A880] mb-4">Resort Gallery</h2>
+            <p class="section-subtitle font-sans font-light text-sm text-[#F5F2EB]/60 tracking-wide text-center max-w-2xl mx-auto mb-16">A glimpse into the luxury, grand lawns, and royal ambiance of Sargawan Palace.</p>
+            
+            <div class="gallery-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="gallery-item relative overflow-hidden h-[300px] border border-white/5 group">
+                    <img src="https://sargawanpalace.co.in/images/slides/sargawa_resto.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sargawan Palace Wedding Lawn">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-serif text-lg text-[#F5F2EB]">Grand Wedding Lawns</h4>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden h-[300px] border border-white/5 group">
+                    <img src="https://sargawanpalace.co.in/images/slides/sargawa_full2.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sargawan Palace Luxury Exterior">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-serif text-lg text-[#F5F2EB]">Royal Architecture</h4>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden h-[300px] border border-white/5 group">
+                    <img src="https://sargawanpalace.co.in/admin/uploaded/event_gallery/p17067774003572.jpg
+" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Sargawan Palace Banquet Hall">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-serif text-lg text-[#F5F2EB]">Premium Banquet Halls</h4>
+                    </div>
+                </div>
+                <div class="gallery-item relative overflow-hidden h-[300px] border border-white/5 group">
+                    <img src="assets/wedding.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Celebrity Event Night Setup">
+                    <div class="gallery-overlay absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6 flex items-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-serif text-lg text-[#F5F2EB]">Star-Studded Events</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Premium Footer Section -->
     <footer class="bg-[#080706] border-t border-white/5 py-16 px-6 md:px-20">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start text-center md:text-left">
             <div class="space-y-4">
@@ -185,13 +199,12 @@
             </div>
             <div class="space-y-4 md:text-right">
                 <p class="text-[#F5F2EB]/30 font-sans text-[10px] tracking-[0.2em] uppercase">
-                    &copy; 2026 Sargawan Palace. Crafted for Excellence.
+                    © 2026 Sargawan Palace. Crafted for Excellence.
                 </p>
             </div>
         </div>
     </footer>
 
-    <!-- Link your custom scripts file -->
     <script src="script.js"></script>
 </body>
 </html>
