@@ -57,3 +57,95 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "none"
     });
 });
+
+// ==========================================================================
+// ADDED: HIGH-PERFORMANCE MODAL & WHATSAPP INTEGRATION ENGINE (Global Scope)
+// ==========================================================================
+
+const WHATSAPP_NUMBER = "918109944185"; // <--- Yahan apna active WhatsApp number bina '+' lagaye daal dena
+
+// 1. Open Modal with Dynamic Input Field rendering based on service selected
+window.openBookingModal = function(type) {
+    const modal = document.getElementById('bookingModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const bookingTypeInput = document.getElementById('bookingType');
+    const dynamicLabel = document.getElementById('dynamicLabel');
+    const dynamicInput = document.getElementById('dynamicInput');
+
+    if (!modal || !modalTitle || !bookingTypeInput || !dynamicLabel || !dynamicInput) return;
+
+    bookingTypeInput.value = type;
+    modalTitle.innerText = type;
+
+    // Swap layouts gracefully based on selection type
+    if (type === 'Stay / Room Booking') {
+        dynamicLabel.innerText = "Select Suite Type";
+        dynamicInput.outerHTML = `
+            <select id="dynamicInput" required class="w-full bg-[#161513] border border-white/10 p-3 text-[#F5F2EB]/80 focus:outline-none focus:border-[#C5A880] transition-colors uppercase">
+                <option value="The Maharaja Suite">The Maharaja Suite (Premium Luxury)</option>
+                <option value="Heritage Executive">Heritage Executive (Classic Comfort)</option>
+            </select>
+        `;
+    } else if (type === 'Wedding & Event') {
+        dynamicLabel.innerText = "Estimated Gathering Size";
+        dynamicInput.outerHTML = `
+            <input type="number" id="dynamicInput" required min="50" placeholder="e.g., 200" class="w-full bg-[#161513] border border-white/10 p-3 text-[#F5F2EB] focus:outline-none focus:border-[#C5A880] transition-colors">
+        `;
+    } else if (type === 'Go-Karting Session') {
+        dynamicLabel.innerText = "Number of Drivers / Slots";
+        dynamicInput.outerHTML = `
+            <input type="number" id="dynamicInput" required min="1" max="15" placeholder="e.g., 2" class="w-full bg-[#161513] border border-white/10 p-3 text-[#F5F2EB] focus:outline-none focus:border-[#C5A880] transition-colors">
+        `;
+    }
+
+    modal.classList.add('modal-active');
+};
+
+// 2. Close Modal Handler
+window.closeBookingModal = function() {
+    const modal = document.getElementById('bookingModal');
+    if (modal) {
+        modal.classList.remove('modal-active');
+    }
+};
+
+// Close Modal overlay safely if user clicks background area
+window.addEventListener('click', (event) => {
+    const modal = document.getElementById('bookingModal');
+    if (event.target === modal) {
+        window.closeBookingModal();
+    }
+});
+
+// 3. Dynamic Form Data Processing & WhatsApp API Handshake
+window.handleFormSubmit = function(event) {
+    event.preventDefault();
+
+    const bookingType = document.getElementById('bookingType').value;
+    const guestName = document.getElementById('guestName').value;
+    const bookingDate = document.getElementById('bookingDate').value;
+    const dynamicValue = document.getElementById('dynamicInput').value;
+
+    let dynamicHeaderLabel = "Details";
+    if (bookingType === 'Stay / Room Booking') dynamicHeaderLabel = "Chosen Suite";
+    if (bookingType === 'Wedding & Event') dynamicHeaderLabel = "Expected Guests";
+    if (bookingType === 'Go-Karting Session') dynamicHeaderLabel = "Total Drivers";
+
+    // Premium formatted royal message payload
+    const message = `👑 *SARGAWAN PALACE RESORT* 👑\n` +
+                    `*Bespoke Experience Reservation*\n\n` +
+                    `▪️ *Inquiry Type:* ${bookingType}\n` +
+                    `▪️ *Guest Name:* ${guestName}\n` +
+                    `▪️ *Preferred Date:* ${bookingDate}\n` +
+                    `▪️ *${dynamicHeaderLabel}:* ${dynamicValue}\n\n` +
+                    `Please check internal ledger availability and confirm the slot.`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+    window.closeBookingModal();
+    document.getElementById('royalBookingForm').reset();
+    
+    // Smooth redirect logic
+    window.open(whatsappUrl, '_blank');
+};
